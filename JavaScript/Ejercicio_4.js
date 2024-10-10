@@ -120,3 +120,46 @@ console.log(`Y para la matrizIrregular?`)
 let numeroFilas=matrizIrregular.length
 for(let i = 0; i < numeroFilas; i++)
     console.log(`La longitud de la fila ${[i]} es = ${matrizIrregular[i].length}`)
+console.log("%c5.- Agregar un nuevo elemento a un arreglo (PUSH)", style_console);
+
+let estudiantes = ["Francisco Garcia", "Teresa Vargas", "Jose Francisco", "Michelle Castro", "Edwin Campos"]
+console.log("Los elementos actuales del arreglo son: ")
+console.table(estudiantes)
+console.log("Agregamos a un nuevo estudiante llamado: Raul Pazos")
+estudiantes.push("Raul Pazos")
+console.log("Despues de agregar los elementos del arreglo son: ")
+console.table(estudiantes)
+console.log("¿Qué pasa con los Mixtos?")
+console.log("El arregloMixto actualmente tiene los siguientes elementos: ")
+console.table(arregloMixto)
+console.log("Agregamos la palabra: \"Hola\", como nuevo elemento")
+arregloMixto.push("Hola")
+console.log("Y también agregamos el numero -31215282838822828288251548.2959828288284949, siendo este un BigInt")
+arregloMixto.push(BigInt(-31215282838822828288251548.2959828288284949));
+console.log("Después de estas dos operaciones el arreglo queda con los siguientes elementos: ")
+console.table(arregloMixto)
+
+
+console.log("%c6.- Agregar un nuevo elemento a un arreglo (UNSHIFT)", style_console);
+
+console.table(estudiantes)
+console.log("Ahora agregamos a Brisa Garcia, al comienza del arreglo.")
+estudiantes.unshift("Brisa Garcia")
+console.log("La lista actual es: ")
+console.table(estudiantes)
+
+console.log("%c7.- Eliminar elementos de un arreglo en la última posición (POP)", style_console);
+console.log("El arreglo tiene los siguientes elemntos: ")
+console.table(estudiantes)
+console.log("Para este caso eliminaremos a Raul Pazos, en la posición última")
+estudiantes.pop()
+console.log("Despues de eliminar el elemento el arreglo queda de la sig manera: ")
+console.table(estudiantes)
+
+console.log("%c8.- Eliminar elemento de un arreglo en la primera posición (SHIFT)", style_console);
+console.log("El arreglo tiene los siguientes elementos: ")
+console.table(estudiantes)
+console.log("Para este caso eliminaremos a Brisa Garcia, en la posición última")
+estudiantes.shift()
+console.log("Despues de eliminar el elemento el arreglo queda de la sig manera: ")
+console.table(estudiantes)
