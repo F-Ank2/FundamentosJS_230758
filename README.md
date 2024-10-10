@@ -17,6 +17,9 @@ con el objetivode confirmar los conocimientos básicos de lógica de programaci�
 |3.|Declaración de Variables (Undefined/Boolean/Number)|10|✅Finalizada|
 |4.|Declaración de Variables (continuación)|5|✅Finalizada|
 |5.|Introducción a Objetos|19|✅Finalizada|
+|6.|Ejercicio 04: Repaso de Arreglos|18|✅Finalizada|
+|7.|Ejercicio 05: |--|Activo|
+
 
 
 ### Autor
