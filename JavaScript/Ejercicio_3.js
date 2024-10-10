@@ -148,3 +148,57 @@ console.log('Por cuestiones de inflación el costo del producto ha cambiado y de
 Producto.Precio=19000.00
 console.log(`Los nuevos valores del producto son:`)
 console.log(Producto2);
+
+// Agregar nuevas propiedades a un objeto existente
+console.log("%c5.- Agregación de Propiedades de un Objeto (MUTACIÓN)",style_console);
+console.log("Objeto antes de ser modificado:")
+console.table(Comprador)
+
+// Agregando propiedades
+Comprador['Direccion'] = "Av. 05 de Mayo #25, Interior 4A, Xicotepec de Juárez, Puebla, México"
+Comprador['Tipo'] = "Premium";
+Comprador['Estatus'] = "Inactivo"
+Comprador['TotalCompras'] = 50000.00
+console.log("Objetos despues de ser modificado")
+console.table(Comprador)
+
+//Eliminar propiedades de un objeto existente
+console.log("%c6.- Eliminación de propiedades de un objeto (MUTACION)", style_console)
+console.log("Objeto antes de ser modificado")
+
+console.table(Pedido)
+//Eliminamos la propiedad de Tipo de pedido
+delete Pedido.TipoPago;
+console.log("Objeto despues de ser modificado")
+console.table(Pedido)
+
+console.log("%c7.- Métodos para controlar la mutabilidad de los objetos, congelación (FREEZE)", style_console);
+
+//Si deseamos permitir que los objetos 
+console.log('La estructura actual del objeto comprador es: ');
+console.table(Comprador)
+Object.freeze(Comprador)
+
+//Intentemos agregar, eliminar o modificar los valores de sus propiedades
+Comprador.FechaUltimaCompra= "05/09/2024 10:15:25"
+delete Comprador.Tipo
+Comprador.Direccion = "Calle 16 de septiembre #102, col. Manantiales, Huauchinango, Puebla, México";
+console.log('Verificamos sis e realizaron los cambios en el objeto Comprador: ')
+console.table(Comprador)
+
+
+console.log("%c8.- Métodos para controlar la mutabilidad de los Objetos, Sellado (SEAL)", style_console);
+// Sin embargo, en el caso que desemos poder modificar los valores de las propiedades del Objeto, pero no su estructura, usaremos SEAL
+console.log("Objeto antes de ser modificado: ")
+console.table(Pedido)
+//Sellamos el objeto
+Object.seal(Pedido)
+// Intentamos modificar su estructura
+Pedido['FechaPedido'] = "25/09/2024 11:05:03"
+delete Pedido['Cantidad']
+console.log('Verificamos si se realizaron los cambios en el Objeto PEDIDO:')
+console.table(Pedido)
+//Ahora intentamos modificar el valor de las propiedades
+Pedido.Cantidad = 5
+console.log('Verificamos si se realizaron los cambios en el Objeto PEDIDO:')
+console.table(Pedido);
