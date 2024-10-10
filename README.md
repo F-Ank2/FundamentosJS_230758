@@ -12,7 +12,9 @@ con el objetivode confirmar los conocimientos básicos de lógica de programaci�
 
 |No.|Descripción|Potenciador|Estatus|
 |---|-----------|-------|-------|
-|1.|Metodología de Evaluación|1|En Curso|
+|1.|Metodología de Evaluación|1|✅Finalizada|
+|2.|Inicialización del Proyecto de Fundamentos de JS|5|✅Finalizada|
+|3.|Declaración de Variables (Undefined/Boolean/Number)|10|✅Finalizada|
 
 
 ### Autor
