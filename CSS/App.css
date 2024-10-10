@@ -1,0 +1,90 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: antiquewhite;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+header{
+    padding: 3rem 0;
+}
+
+header h1{
+    text-align: center;
+    color: chocolate;
+    font-size: 6rem;
+}
+
+header p{
+    color: cadetblue;
+    text-align: center;
+    font-size: 3,2rem;
+}
+
+/*Pagina 2*/
+
+.DOM{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.DON h2{
+    color: beige;
+    text-align: center;
+}
+
+.DOM nav a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.DOM p{
+    color: #256325eb;
+    font-size: 20px;
+}
+
+.DOM #formulario{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.DOM #formulario input{
+    display: block;
+    width: 100%;
+    border: none;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.DOM #formulario input[type="submit"]{
+    background-color: #2563EB;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+}
+
+.alerta{
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.alerta.error{
+    background-color: rgb(162, 0, 0);
+}
+
+.alerta.exito{
+    background-color: rgb(7, 145, 7);
+}
