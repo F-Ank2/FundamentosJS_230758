@@ -54,3 +54,153 @@ console.log(`Tu nuevo saldo es de: ${saldo_cuenta}`)
 // El cliente realiza un abono de 1500 
 monto_transaccion = 1500;
 console.log(`Tu abono de: ${monto_transaccion} ha sido recibido, tu nuevo saldo es de: ${saldo_cuenta+monto_transaccion}`);
+
+// 4. Strings o Cadenas de Texto
+const alumno = "Jesús Domínguez Ramírez";
+let producto;
+
+console.warn("--- Tipo de Dato - STRING (Cadena de Caractéres");
+console.log(`El nombre del alumno es: ${alumno}, que es un tipo de dato ${typeof(alumno)}`);
+producto = "MONITOR 20\"";
+console.log(`El nombre del producto es: ${producto}, que es un tipo de dato ${typeof(producto)}`);
+
+// Manipulando los STRINGS
+console.log(`Más adelante podremos transformar el contenido de los STRINGS usando funciones específicas como convertir a mayúsculas: ${alumno} => ${alumno.toUpperCase()}`);
+console.log(`O en su defecto a minúsculas: ${producto} => ${producto.toLowerCase()}`);
+
+let numero = "30";
+let numero2 = 30;
+
+console.log(typeof numero);
+console.log(typeof numero2);
+
+// 5. BigInt (Enteros de Dimensiones Amplias) - Generalmente utilizado en sistemas matemáticos, físicos o espaciales donde se requiere de una excelente precisión numérica.
+console.warn("--- Tipo de Dato - BIGINT (Número Amplio)")
+const numeroGrande = 1234567890
+const numeroGrande2 = 12345678901234567890;
+let numeroGrande3 = 12345678901234567890123456789;
+let numeroGrande4 = 1234567890123456789012345678901234567890;
+console.log(`El primero experimento de un número grande es: ${numeroGrande}, que si es soportado por NUMBER, y su tipo de dato es: ${typeof(numeroGrande)}`);
+console.log(`El primero experimento de un número grande es: ${numeroGrande2}, que si es soportado por NUMBER, y su tipo de dato es: ${typeof(numeroGrande2)}`);
+console.log(`El primero experimento de un número grande es: ${numeroGrande3}, que si es soportado por NUMBER, y su tipo de dato es: ${typeof(numeroGrande3)}`);
+console.log(`El primero experimento de un número grande es: ${numeroGrande4}, que ya no es soportado por NUMBER perdiendo precisión, y su tipo de dato es: ${typeof(numeroGrande4)}`);
+
+//Para definir el tipo de dato BigInt debemos invocar la función BigInt o usar la letra "n" al final del número en la asignación de valor
+console.log("Declaramos los valores númericos gran tamaño...")
+numeroGrande3 = BigInt(12345678901234567890123456789);
+numeroGrande4 = 123456789012345678901234567891234567890n;
+
+console.log(`El segundo experimento de un numero grande es: ${numeroGrande3}, y su tipo de dato es: ${typeof(numeroGrande3)}`)  
+console.log(`El segundo experimento de un numero grande es: ${numeroGrande4}, y su tipo de dato es: ${typeof(numeroGrande4)}`)
+// Hay que considerar que los tipos de datos declarados como BigInt no son operables con los de tipo number
+
+
+let numero1 = 238;
+console.log(typeof numeroGrande);
+
+// Si intentamos  realizar una operación matemática entre estos dos tipos de datos, obtenderemos un error crítico de operación
+
+console.log(`El resultado de la operación de: numeroGrande4/numero1 es = a: ${numeroGrande4/BigInt(numero1)}`);
+
+// const numero3 = 10;
+// const numero4 = 20;
+
+// console.log(numero3+Number(numeroGrande));
+
+// const numero5 = "30";
+// const numero6= 30
+// console.log(typeof String(numero2));
+// console.log(typeof Numbernumero);
+
+// 6. Symbol
+console.warn("--- Tipo de Dato - SYMBOL (Simbolo o Forzar la Unicidad)")
+// VID APUNTES
+// const primerSymbol = Symbol(30);
+// const segundoSymbol= Symbol(30);
+
+// console.log(primerSymbol===segundoSymbol);
+// console.log(primerSymbol.valueOf());
+// console.log(segundoSymbol.valueOf());
+
+// Marco APUNTES
+
+// Declaramos diferentes variables con valores similares o iguales?
+const numero3 = 2;
+const numero4 = 2.0;
+const numero5 = "2";
+const numero6 = "2.0";
+const numero7 = Symbol(2);
+const numero8 = Symbol(2.0);
+const numero9 = Symbol("2");
+const numero10 = Symbol(2);
+// Prueba de comparación 1: ¿Es 2 = 2.0?
+console.log("Prueba de comparación 1:");
+if(numero3 == numero4){
+    console.log(`Se han comparado los valores de numero3 y numero4, confirmando que tienen el mismo valor.`)
+} else {
+    console.log(`Se han comparado los valores de numero3 y numero4, detectando que NO tienen el mismo valor.`)
+}
+
+// Prueba de comparación 2: ¿Es 2 = "2"?
+console.log("Prueba de comparación 2:");
+if(numero3 == numero5)
+    console.log(`Se han comparado los valores de numero3 y numero5, confirmando que tienen el mismo valor.`)
+ else 
+    console.log(`Se han comparado los valores de numero3 y numero5, detectando que NO tienen el mismo valor.`)
+
+// Prueba de comparación 3: ¿Es 2 estrictamente = "2"?
+/* 
+= Es asignación 
+== Igualdad de valor
+=== Igualdad estricta (compara valor y tipo de dato)
+*/
+console.log("Prueba de comparación 3:");
+if(numero3 === numero5)
+    console.log(`Se han comparado los valores de numero3 y numero5, confirmando que tienen el mismo valor.`)
+ else 
+    console.log(`Se han comparado los valores de numero3 y numero5, detectando que NO tienen el mismo valor.`)
+
+// Prueba de comparación 4: ¿Es 2 = "2.0"?
+console.log("Prueba de comparación 4:");
+if(numero3 == numero6)
+    console.log(`Se han comparado los valores de numero3 y numero6, confirmando que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores d enumero1 y numero4, detectando que NO tienen el mimso valor.`)
+
+    
+// Prueba de comparación 5: ¿Es 2 estrictamente = "2.0"?
+console.log("Prueba de comparación 5:");
+if(numero3 === numero6)
+    console.log(`Se han comparado los valores de numero3 y numero6, confirmando que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores de numero1 y numero6, detectando que NO tienen el mimso valor.`)
+
+// Prueba de comparación 6: ¿Es 2 = Symbol(2)? 
+console.log("Prueba de comparación 6")
+if (numero1 == numero7)
+    console.log(`Se han comparado los valores de numero1 y numero7, confirmado que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores de numero1 y numero7, detectando que NO tienen el mismo valor.`)
+
+// Prueba de comparación 7: ¿Es 2 estrictamente = Symbol(2)? 
+console.log("Prueba de comparación 7")
+if (numero1 === numero7)
+    console.log(`Se han comparado los valores de numero1 y numero7, confirmado que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores de numero1 y numero7, detectando que NO tienen el mismo valor.`)
+
+// Prueba de comparación 8: ¿Es Symbol(2) = Symbol(2)? 
+console.log("Prueba de comparación 8: ¿Es Symbol(2) = Symbol(2)?")
+if (numero1 == numero10)
+    console.log(`Se han comparado los valores de numero1 y numero10, confirmado que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores de numero1 y numero10, detectando que NO tienen el mismo valor.`)
+
+// Prueba de comparación 9: ¿Es Symbol(2) = Symbol(2)? 
+console.log("Prueba de comparación 8: ¿Es Symbol(2) estrictamente = Symbol(2)?")
+if (numero1 === numero10)
+    console.log(`Se han comparado los valores de numero1 y numero10, confirmado que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores de numero1 y numero10, detectando que NO tienen el mismo valor.`)
+
+    
