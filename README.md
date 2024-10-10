@@ -12,6 +12,8 @@ con el objetivode confirmar los conocimientos básicos de lógica de programaci�
 
 |No.|Descripción|Potenciador|Estatus|
 |---|-----------|-------|-------|
+|1.|Metodología de Evaluación|1|En Curso|
+
 
 ### Autor
 Francisco Garcia Garcia
