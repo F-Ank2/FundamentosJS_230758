@@ -56,7 +56,7 @@ monto_transaccion = 1500;
 console.log(`Tu abono de: ${monto_transaccion} ha sido recibido, tu nuevo saldo es de: ${saldo_cuenta+monto_transaccion}`);
 
 // 4. Strings o Cadenas de Texto
-const alumno = "Jesús Domínguez Ramírez";
+const alumno = "Francisco Garcia Garcia";
 let producto;
 
 console.warn("--- Tipo de Dato - STRING (Cadena de Caractéres");

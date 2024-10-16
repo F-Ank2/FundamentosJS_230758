@@ -85,12 +85,12 @@ let Producto2 =
 let Comprador = 
 {
     ID: 2532,
-    Nombre: "Jesús",
-    Apellidos: "Domínguez Ramírez",
+    Nombre: "Francisco",
+    Apellidos: "Garcia Garcia",
     Tipo: "Frecuente",
-    Correo: "230028@utxicotepec.edu.mx",
+    Correo: "230758@utxicotepec.edu.mx",
     PaisOrigen: "México",
-    SaldoActual: 3200.00
+    SaldoActual: 320000.00
 }
 
 let Pedido = 
