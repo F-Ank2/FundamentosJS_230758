@@ -21,7 +21,6 @@ con el objetivode confirmar los conocimientos básicos de lógica de programaci�
 |7.|Ejercicio 05: |16|✅Finalizada|
 
 
-
 ### Autor
 Francisco Garcia Garcia
 Unidad 1 
